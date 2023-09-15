@@ -20,6 +20,9 @@ int fibonacciSingleThread(unsigned int start, unsigned int end) {
 }
 
 // Function to calculate Fibonacci(multi-threaded)
+// Uses Eq f(n) = 4 * f(n-3) + f(n-6)
+// After n = 186, elements of vector resultMultiThread show infinity
+// Speed caps out to around a 2x increase with the use of 3 threads
 void fibonacciMultiThread(unsigned int start, unsigned int end, int threadNum) {
 
     std::vector<std::thread> threads;
